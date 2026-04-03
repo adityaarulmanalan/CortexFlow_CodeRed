@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #020202;
+  --color-foreground: #e5e5e5;
+  
+  --color-card: #0a0a0a;
+  --color-card-foreground: #e5e5e5;
+
+  --color-popover: #0a0a0a;
+  --color-popover-foreground: #e5e5e5;
+
+  --color-primary: #2563eb; 
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #171717;
+  --color-secondary-foreground: #ffffff;
+
+  --color-muted: #171717;
+  --color-muted-foreground: #737373;
+
+  --color-accent: #2563eb;
+  --color-accent-foreground: #ffffff;
+
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+
+  --color-border: rgba(255, 255, 255, 0.03);
+  --color-input: rgba(255, 255, 255, 0.05);
+  --color-ring: rgba(37, 99, 235, 0.4);
+
+  --radius-xl: 1.5rem;
+  --radius-lg: 1rem;
+  --radius-md: calc(1rem - 2px);
+  --radius-sm: calc(1rem - 4px);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (width >= calc(var(--theme(--breakpoint-sm)))) {
+    max-width: none;
+  }
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-border, currentColor);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+
+    /* Ultra-Subtle 3D Isometric Grid */
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: center center;
+    background-attachment: fixed;
+    /* Apply Perspective rotation to the body's before element below to make it 3D, or just a static grid */
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: -50%; left: -50%; right: -50%; bottom: -50%;
+    z-index: -1;
+    background-image: 
+      linear-gradient(rgba(37, 99, 235, 0.04) 2px, transparent 2px),
+      linear-gradient(90deg, rgba(37, 99, 235, 0.04) 2px, transparent 2px);
+    background-size: 80px 80px;
+    transform-origin: center center;
+    transform: perspective(600px) rotateX(60deg) scale(2);
+    pointer-events: none;
+    background-attachment: fixed;
+    opacity: 0.6;
+    mask-image: radial-gradient(circle at center, transparent 10%, black 80%);
+    -webkit-mask-image: radial-gradient(circle at center, transparent 10%, black 80%);
+  }
+}
+
+@utility scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Base specific overrides */
+input::placeholder {
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Advanced Lighting & Depth */
+@keyframes border-glow {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.animated-border {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+}
+
+.animated-border::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(transparent, rgba(37, 99, 235, 0.6), transparent 15%);
+  animation: border-glow 3s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glass-surface {
+  position: relative;
+  z-index: 1;
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.01), 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.inner-content {
+  position: relative;
+  z-index: 2;
+  border-radius: inherit;
+  background: inherit;
+  height: 100%;
+  width: 100%;
+}
+
+/* CortexFlow Custom Text Effect */
+@keyframes lightning-flash {
+  0% { text-shadow: 0 0 0px rgba(56, 189, 248, 0); }
+  2% { text-shadow: 0 0 15px rgba(56, 189, 248, 0.8), 0 0 30px rgba(56, 189, 248, 0.4); opacity: 1; }
+  4% { text-shadow: 0 0 2px rgba(56, 189, 248, 0.2); opacity: 0.95; }
+  6% { text-shadow: 0 0 20px rgba(56, 189, 248, 1), 0 0 40px rgba(56, 189, 248, 0.5); opacity: 1; }
+  8% { text-shadow: 0 0 0px rgba(56, 189, 248, 0); }
+  100% { text-shadow: 0 0 0px rgba(56, 189, 248, 0); }
+}
+
+.animate-lightning {
+  animation: lightning-flash 5s infinite;
+  display: inline-block;
+  color: #fff;
+}
+
+@keyframes sweep {
+  0% { background-position: 200% center; }
+  20% { background-position: -200% center; }
+  100% { background-position: -200% center; }
+}
+
+.lightning-sweep {
+  background: linear-gradient(90deg, 
+    #fff 0%, 
+    #fff 40%, 
+    #60a5fa 45%,      
+    #2563eb 50%,     
+    #60a5fa 55%, 
+    #fff 60%, 
+    #fff 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: sweep 6s infinite linear;
+}
