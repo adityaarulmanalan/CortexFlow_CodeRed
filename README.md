@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CortexFlow: Agentic Workforce Platform
 
-## Getting Started
+**CortexFlow** is a next-generation AI-powered platform designed to streamline team collaboration, automate task management, and provide intelligent organizational memory. Built for the modern distributed workforce, it leverages the power of **Google Gemini AI** to bridge the gap between meetings and execution.
 
-First, run the development server:
+One of the main and unique feature of this paltform is multi agent system where manager agent AI assigns tasks to employees and on the employee side there will be an another agent called emloyee agent which will tell the employee to do the work and will also help him to do the work (like genrating code..) .After the particular task is over the employee agent and manager agent will speak together and will decide the next course of action.
 
+## 🚀 Key Features
+
+### 🎤 AI-Powered Meeting Extraction
+Transform raw meeting transcripts into actionable data. Our agentic pipeline automatically extracts:
+- **Tasks**: Title, owner, and smart deadlines.
+- **Decisions**: Contextual outcomes and historical tracking.
+- **Summaries**: Concise, high-level overviews of discussions.
+
+### 👥 Multi-Role Workspace
+Tailored experiences for different organizational needs:
+- **Manager Dashboard**: Comprehensive team oversight, task allocation, and progress tracking.
+- **Employee Portal**: Personalized task views, AI-assisted code generation, and work history.
+
+### 📚 Intelligent Organizational Memory (RAG)
+Query your company's collective knowledge base. Ask questions about past decisions, team roles, or project statuses and get instant, context-aware answers powered by AI.
+
+### 🛡️ Resilience & Synthetic Fallbacks
+Built for production reliability. The system includes a "Hackathon Safety Net" with synthetic data fallbacks if the AI link is interrupted or quotas are reached.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Library**: React 19
+- **Styling**: Tailwind CSS 4 + PostCSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **AI Engine**: Google Generative AI (Gemini 2.0 Flash / Pro)
+- **State Management**: Persistent Local Storage Sync
+
+---
+
+## 🚦 Getting Started
+
+### 1. Prerequisites
+- [Node.js 18+](https://nodejs.org/)
+- A [Google AI Studio](https://aistudio.google.com/) API Key.
+
+### 2. Installation
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/execumind.git
+cd execumind
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Running Locally
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. Configuration
+1. Click on the **Settings** icon in the sidebar.
+2. Navigate to **AI Configuration**.
+3. Paste your **Gemini API Key**.
+4. (Optional) Toggle **Demo Mode** to test the UI without an active API key.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🌐 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+CortexFlow is optimized for deployment on **Vercel**. 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for a detailed step-by-step guide to deploying this project for free.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+MIT License - Copyright (c) 2026 ExecuMind Team.
