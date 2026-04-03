@@ -5,6 +5,14 @@
 CortexFlow is a next-generation AI-powered platform built to eliminate the gap between **meetings, tasks, and knowledge**. Designed for modern distributed teams, it uses **agentic AI systems powered by Google Gemini** to transform discussions into real outcomes — automatically.
 
 ---
+TO ACCESS THE WEBAPP:
+
+https://cortex-flow-code-red.vercel.app/login
+
+Type admin@cortex.ai to login as manager. 
+And for employee login use nav@cortex.ai 
+
+Both of them have different UI.
 
 ## ⚡ Core Idea
 
