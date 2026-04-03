@@ -10,7 +10,7 @@ TO ACCESS THE WEBAPP:
 https://cortex-flow-code-red.vercel.app/login
 
 Type admin@cortex.ai to login as manager. 
-And for employee login use nav@cortex.ai 
+And for employee login use aditya@cortex.ai 
 
 Both of them have different UI.
 
