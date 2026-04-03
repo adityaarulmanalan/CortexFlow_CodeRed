@@ -144,6 +144,8 @@ CortexFlow_CodeRed/
 
 Type admin@cortex.ai to login
 
+---
+
 🎯 Vision
 
 CortexFlow isn’t just a tool.
