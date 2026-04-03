@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧠 CortexFlow — Agentic Workforce Platform
 
-## Getting Started
+> **Where conversations turn into execution.**
 
-First, run the development server:
+CortexFlow is a next-generation AI-powered platform built to eliminate the gap between **meetings, tasks, and knowledge**. Designed for modern distributed teams, it uses **agentic AI systems powered by Google Gemini** to transform discussions into real outcomes — automatically.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚡ Core Idea
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Most tools today:
+- Summarize meetings ❌  
+- Track tasks ❌  
+- Store knowledge ❌  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+But none connect them into a continuous workflow.
 
-## Learn More
+👉 **CortexFlow does all three — autonomously.**
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤖 Multi-Agent System (What Makes This Different)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+At the heart of CortexFlow is a **collaborative AI workforce**:
 
-## Deploy on Vercel
+### 🧑‍💼 Manager Agent
+- Understands team goals  
+- Assigns tasks intelligently  
+- Tracks execution progress  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 👨‍💻 Employee Agent
+- Guides users through tasks  
+- Assists in execution (e.g., generating code, suggestions)  
+- Improves productivity in real-time  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🔁 Agent-to-Agent Collaboration
+Once a task is completed:
+- Manager Agent ↔ Employee Agent communicate  
+- Evaluate results  
+- Decide next actions autonomously  
+
+👉 This creates a **self-improving execution loop**, not just a tool.
+
+---
+
+## 🚀 Key Features
+
+### 🎤 AI-Powered Meeting Extraction
+Turn raw conversations into structured execution:
+
+- 📌 **Tasks** → Title, owner, deadlines  
+- 🧠 **Decisions** → Context + history  
+- ✨ **Summaries** → Clean, high-level insights  
+
+---
+
+### 👥 Multi-Role Workspace
+
+#### 🧑‍💼 Manager Dashboard
+- Team overview  
+- Task allocation  
+- Progress tracking  
+
+#### 👨‍💻 Employee Portal
+- Personalized task feed  
+- AI-assisted execution (code, content, etc.)  
+- Work history  
+
+---
+
+## 📚 Intelligent Organizational Memory (RAG)
+
+Ask anything about your organization:
+
+> “What did we decide last sprint?”  
+> “Who is working on this feature?”  
+
+Get **instant, context-aware answers** powered by AI.
+
+---
+
+## 🛡️ Resilience & Fallback System
+
+Built for reliability:
+
+- Synthetic data fallback  
+- Demo mode for testing  
+- Handles API failures gracefully  
+
+👉 Perfect for hackathons *and* real-world scaling.
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer            | Technology |
+|------------------|------------|
+| Framework        | Next.js 16 (App Router) |
+| Frontend         | React 19 |
+| Styling          | Tailwind CSS 4 + PostCSS |
+| Animations       | Framer Motion |
+| Icons            | Lucide React |
+| AI Engine        | Google Gemini (Flash / Pro) |
+| State Management | Persistent Local Storage |
+
+---
+
+## 🚦 Getting Started
+
+### 1. Prerequisites
+- Node.js 18+  
+- Google AI Studio API Key  
+
+---
+
+### 2. Installation
+
+> bash
+git clone https://github.com/adityaarulmanalan/CortexFlow_CodeRed.git
+
+cd CortexFlow_CodeRed
+
+npm install
+
+### 3. Configuration
+- Go to Settings
+- Open AI Configuration
+- Paste your Gemini API Key
+- (Optional) Enable Demo Mode
+
+---
+
+🧩 Project Structure
+CortexFlow_CodeRed/
+├── public/
+├── src/
+│   ├── app/
+│   ├── components/
+│   └── lib/
+├── package.json
+└── tsconfig.json
+
+---
+
+🎯 Vision
+
+CortexFlow isn’t just a tool.
+
+It’s the beginning of a digital workforce where:
+
+AI doesn’t just assist
+It plans, executes, and evolves
+
+---
+
+📄 License
+
+MIT License © 2026 CortexFlow Team
