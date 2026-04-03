@@ -45,7 +45,7 @@ Built for production reliability. The system includes a "Hackathon Safety Net" w
 
 ### 2. Installation
 ```bash
-git clone https://github.com/yourusername/execumind.git
+git clone https://github.com/adityaarulmanalan/execumind.git
 cd execumind
 npm install
 ```
